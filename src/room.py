@@ -1,10 +1,10 @@
 class Room:
 
-    def __init__(self, name, song_list):
+    def __init__(self, name):
         self.name = name
-        self.song_list = song_list
+        self.song_list = []
         self.guest_list = []
 
 
-    def add_song_to_song_list(self, song):
+    def add_song_to_list(self, song):
         self.song_list.append(song)
