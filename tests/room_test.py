@@ -11,17 +11,16 @@ class TestRoom(unittest.TestCase):
         self.song_2 = Song("Dr Dre", "Forgot About Dre")
         self.song_3 = Song("David Byrne", "Finite=Alright")
         self.song_4 = Song("Portishead", "Glory Box")
-        self.song_list = [self.song_1, self.song_2, self.song_3]
 
     def test_room_has_name(self):
-        self.assertEqual("Bowie", self.room.name)
+        self.assertEqual("Bowie", self.room.get_room_name())
 
-
-    def test_song_count(self):
-        self.assertEqual(3, len(self.song_list))
+    
+    def test_empty_song_list(self):
+        self.room.song_count()
+        self.assertEqual(0, self.room.song_count())
         
     
     def test_add_song_to_list(self):
-        self.room.add_song_to_list(self.song_4)
-        print(self.song_list)
-        self.assertEqual(4, len(self.song_list))
+        self.room.add_song_to_list(self.song_3)
+        self.assertEqual(1, self.room.song_count())
