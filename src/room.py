@@ -1,6 +1,6 @@
 class Room:
 
-    def __init__(self, name, song_list, guest_list):
+    def __init__(self, name):
         self.name = name
-        self.song_list = song_list
-        self.guest_list = guest_list
+        self.song_list = []
+        self.guest_list = []
