@@ -4,5 +4,5 @@ class Song:
         self.title = title
         self.artist = artist
 
-    def get_song_title(self):
+    def song_has_title(self):
         return self.title
