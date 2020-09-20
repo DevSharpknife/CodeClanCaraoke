@@ -7,7 +7,7 @@ from src.guest import Guest
 class TestRoom(unittest.TestCase):
 
     def setUp(self):
-        self.room_1 = Room("Bowie")
+        self.room_1 = Room("Bowie", 25.00)
         self.song_1 = Song("Juice", "Lizzo")
         self.song_2 = Song("Dr Dre", "Forgot About Dre")
         self.song_3 = Song("David Byrne", "Finite=Alright")
