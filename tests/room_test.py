@@ -95,3 +95,7 @@ class TestRoom(unittest.TestCase):
     def test_clear_room(self):
         self.room_1.clear_room()
         self.assertEqual(0, self.room_1.guest_count())
+
+    def test_add_cash_to_till(self):
+        self.add_cash_to_till(100)
+        self.assertEqual(200, self.room_1.till_count())
