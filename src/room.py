@@ -32,3 +32,9 @@ class Room:
     
     def add_guest_to_list(self, new_guest):
         self.guest_list.append(new_guest)
+
+    def remove_guest_from_list(self, old_guest):
+        self.guest_list.remove(old_guest)
+
+
+

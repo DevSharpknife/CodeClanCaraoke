@@ -73,3 +73,7 @@ class TestRoom(unittest.TestCase):
         self.room_1.guest_list = [self.guest_1, self.guest_3, self.guest_2, self.guest_4]
         self.room_1.remove_guest_from_list(self.guest_2)
         self.assertEqual(3, self.room_1.guest_count())
+
+    def test_remove_all_guests_from_room(self):
+        self.room_1.remove_all_guests_from_room()
+        self.assertEqual(0, self.room_1.guest_count())
