@@ -13,7 +13,7 @@ class Room:
 
     def change_room_name(self, new_room_name):
         self.name = new_room_name
-        
+
 
     def get_song_list(self):
         return self.song_list
@@ -49,3 +49,6 @@ class Room:
     def clear_room(self):
         self.guest_list = []
 
+
+    def add_cash_to_till(self, transaction_amount):
+        self.till += transaction_amount    

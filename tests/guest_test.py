@@ -7,7 +7,7 @@ from src.song import Song
 class TestGuest(unittest.TestCase):
 
     def setUp(self):
-        self.room_2 = Room("Studio 54", 25.00)
+        self.room_2 = Room("Studio 54", 45.00)
         self.guest_1 = Guest("Mick", "Jagger", 20, 12000.00)
         self.guest_2 = Guest("Justin", "Bieber", 16, 0.82)
         self.guest_3 = Guest("Joni", "Mitchell", 21, 100.00)
@@ -19,4 +19,4 @@ class TestGuest(unittest.TestCase):
 
     def test_remove_cash_from_wallet(self):
         self.guest_1.remove_cash_from_wallet(self.room_2.entry_fee)
-        self.assertEqual(11975.00, self.guest_1.wallet_cash_count())
+        self.assertEqual(11955.00, self.guest_1.wallet_cash_count())
