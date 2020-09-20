@@ -55,6 +55,10 @@ class TestRoom(unittest.TestCase):
         self.room_1.remove_song_from_list(self.song_4)
         self.assertEqual(1, self.room_1.song_count())
 
+    def test_clear_song_list(self):
+        self.room_1.clear_song_list()
+        self.assertEqual(0, self.room_1.song_count())
+
 
     def test_room_has_guest_list(self):
         self.assertEqual([], self.room_1.get_guest_list())
