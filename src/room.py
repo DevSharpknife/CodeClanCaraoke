@@ -13,6 +13,7 @@ class Room:
 
     def change_room_name(self, new_room_name):
         self.name = new_room_name
+        
 
     def get_song_list(self):
         return self.song_list
@@ -28,6 +29,7 @@ class Room:
 
     def clear_song_list(self):
         self.song_list = []
+
 
     def get_guest_list(self):
         return self.guest_list
