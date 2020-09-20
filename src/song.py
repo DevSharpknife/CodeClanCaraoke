@@ -6,3 +6,6 @@ class Song:
 
     def song_has_title(self):
         return self.title
+    
+    def song_has_artist(self):
+        return self.artist
