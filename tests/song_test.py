@@ -1,15 +1,17 @@
-# import unittest
+import unittest
 
-# from src.song import Song
+from src.song import Song
 
-# class TestSong(unittest.TestCase):
+class TestSong(unittest.TestCase):
 
-#     def setUp(self):
-#         self.song_1 = Song("Juice", "Lizzo")
-#         self.song_2 = Song("Dr Dre", "Forgot About Dre")
-#         self.song_3 = Song("David Byrne", "Finite=Alright")
-#         self.song_4 = Song("Portishead", "Glory Box")
+    def setUp(self):
+        self.song_1 = Song("Lizzo", "Juice")
+        self.song_2 = Song("Dr Dre", "Forgot About Dre")
+        self.song_3 = Song("David Byrne", "Finite=Alright")
+        self.song_4 = Song("Portishead", "Glory Box")
 
-#     def test_song_has_title(self):
-#         self.song_3.get_song_title()
-#         self.assertEqual("Finite=Alright", self.title)
+    def test_song_has_title(self):
+        self.assertEqual("Finite=Alright", self.song_3.title)
+
+    def test_song_has_artist(self):
+        self.assertEqual("Lizzo", self.song_1.artist)

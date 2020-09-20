@@ -15,6 +15,12 @@ class TestRoom(unittest.TestCase):
 
     def test_room_has_name(self):
         self.assertEqual("Bowie", self.room_1.name)
+
+    def test_room_has_song_list(self):
+        self.assertEqual([], self.room_1.song_list)
+
+    def test_room_has_guest_list(self):
+        self.assertEqual([], self.room_1.guest_list)
     
     def test_room_name_change(self):
         self.room_1.change_room_name("Dylan")
