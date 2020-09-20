@@ -34,7 +34,10 @@ class Room:
         return len(self.guest_list)
     
     def check_in_guest(self, new_guest):
-        self.guest_list.append(new_guest)
+        if self.guest_count() >= 4:
+            return "GO AWAY COURTNEY, YOU KILLED KURT!!!"
+        else:
+            self.guest_list.append(new_guest)
 
     def check_out_guest(self, old_guest):
         self.guest_list.remove(old_guest)

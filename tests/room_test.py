@@ -77,7 +77,7 @@ class TestRoom(unittest.TestCase):
     def test_check_in_room_full(self):
         self.room_1.guest_list = [self.guest_1, self.guest_3, self.guest_2, self.guest_4]
         self.room_1.check_in_guest(self.guest_5)
-        self.assertEqual("No room left", self.room_1.check_in_guest(self.guest_5))
+        self.assertEqual("GO AWAY COURTNEY, YOU KILLED KURT!!!", self.room_1.check_in_guest(self.guest_5))
         self.assertEqual(4, self.room_1.guest_count())
     
 
