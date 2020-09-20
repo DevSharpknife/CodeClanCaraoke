@@ -36,5 +36,6 @@ class Room:
     def remove_guest_from_list(self, old_guest):
         self.guest_list.remove(old_guest)
 
-
+    def remove_all_guests_from_room(self):
+        self.guest_list = []
 
