@@ -11,3 +11,7 @@ class Guest:
     
     def remove_cash_from_wallet(self, cash_taken):
         self.wallet -= cash_taken
+
+    
+
+    
