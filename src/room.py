@@ -56,7 +56,6 @@ class Room:
     def add_cash_to_till(self, transaction_amount):
         self.till += transaction_amount    
 
-    def charge_entry_fee(self):
+    def charge_entry_fee(self, guest):
         guest.remove_cash_from_wallet(self.entry_fee)
         self.add_cash_to_till(self.entry_fee)
-        
