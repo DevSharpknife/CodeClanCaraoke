@@ -99,3 +99,8 @@ class TestRoom(unittest.TestCase):
     def test_add_cash_to_till(self):
         self.room_1.add_cash_to_till(100)
         self.assertEqual(200, self.room_1.till_count())
+
+    def test_charge_entry_fee(self):
+        self.charge_entry_fee()
+        self.assertEqual(75.00, self.guest_3.wallet_cash_count())
+        self.assertEqual(125.00, self.room_1.till_count())
