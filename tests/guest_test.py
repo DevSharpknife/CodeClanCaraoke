@@ -9,7 +9,7 @@ class TestGuest(unittest.TestCase):
     def setUp(self):
         self.room_2 = Room("Studio 54", 45.00)
         self.guest_1 = Guest("Mick", "Jagger", 20, 12000.00, "Dead Flowers")
-        self.guest_2 = Guest("Justin", "Bieber", 16, 0.82, "Sorry")
+        self.guest_2 = Guest("Justin", "Bieber", 16, 5.00, "Sorry")
         self.guest_3 = Guest("Joni", "Mitchell", 21, 100.00, "Juice")
 
     def test_guest_has_whole_name(self):

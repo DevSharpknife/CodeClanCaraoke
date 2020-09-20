@@ -28,6 +28,10 @@ class TestRoom(unittest.TestCase):
     
     def test_room_has_song_list(self):
         self.assertEqual([], self.room_1.get_song_list())
+
+    def test_song_present_in_list(self):
+        self.song_present_in_list()
+        self.assertEqual(True, self.room_1.song_present_in_list())
     
     def test_initial_song_list_count_is_zero(self):
         self.room_1.song_count()
