@@ -60,5 +60,5 @@ class TestRoom(unittest.TestCase):
         self.assertEqual([], self.room_1.get_guest_list())
 
     def test_add_guest_to_list(self):
-        self.add_guest_to_list(self.guest_1)
+        self.room_1.add_guest_to_list(self.guest_1)
         self.assertEqual(1, self.room_1.guest_count())
