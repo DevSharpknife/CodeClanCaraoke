@@ -12,11 +12,11 @@ class TestRoom(unittest.TestCase):
         self.song_2 = Song("Dr Dre", "Forgot About Dre")
         self.song_3 = Song("David Byrne", "Finite=Alright")
         self.song_4 = Song("Portishead", "Glory Box")
-        self.guest_1 = Guest("Mick", "Jagger", 20)
-        self.guest_2 = Guest("Justin", "Bieber", 16)
-        self.guest_3 = Guest("Joni", "Mitchell", 21)
-        self.guest_4 = Guest("Susan", "Boyle", 47)
-        self.guest_5 = Guest("Courtney", "Love", 31)
+        self.guest_1 = Guest("Mick", "Jagger", 20, 12000.00)
+        self.guest_2 = Guest("Justin", "Bieber", 16, 0.82)
+        self.guest_3 = Guest("Joni", "Mitchell", 21, 100.00)
+        self.guest_4 = Guest("Susan", "Boyle", 47, 36.42)
+        self.guest_5 = Guest("Courtney", "Love", 31, 666.66)
 
     def test_room_has_name(self):
         self.assertEqual("Bowie", self.room_1.get_room_name())

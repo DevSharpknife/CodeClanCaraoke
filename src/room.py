@@ -5,6 +5,7 @@ class Room:
         self.song_list = []
         self.guest_list = []
         self.room_limit = 4
+        self.till = 100.00
 
     def get_room_name(self):
         return self.name
