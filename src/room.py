@@ -7,7 +7,15 @@ class Room:
 
     def get_room_name(self):
         return self.name
-        
+
+    
+    def get_song_list(self):
+        return self.song_list
+
+
+    def get_guest_list(self):
+        return self.guest_list
+
 
     def change_room_name(self, new_room_name):
         self.name = new_room_name
