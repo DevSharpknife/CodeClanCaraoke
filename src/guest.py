@@ -5,3 +5,6 @@ class Guest:
         self.surname = surname
         self.age = age
         self.wallet = wallet
+
+    def wallet_cash_count(self):
+        return self.wallet

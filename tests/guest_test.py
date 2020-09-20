@@ -14,4 +14,9 @@ class TestGuest(unittest.TestCase):
         self.guest_5 = Guest("Courtney", "Love", 31, 666.66)
 
     def test_customer_has_funds(self):
-        self.assertEqual(100.00, self.guest_3.wallet)
+        self.assertEqual(100.00, self.guest_3.wallet_cash_count())
+
+    def test_remove_cash_from_wallet(self):
+        self.remove_cash_from_wallet(25)
+        self.assertEqual(11.42, self.guest_4.wallet_cash_count())
+
