@@ -35,3 +35,9 @@ class TestRoom(unittest.TestCase):
     def test_add_song_to_list(self):
         self.room_1.add_song_to_list(self.song_3)
         self.assertEqual(1, self.room_1.song_count())
+
+    def test_add_song_to_list__multiple_songs(self):
+        self.room_1.add_song_to_list(self.song_3)
+        self.room_1.add_song_to_list(self.song_2)
+        self.room_1.add_song_to_list(self.song_1)
+        self.assertEqual(3, self.room_1.song_count())
