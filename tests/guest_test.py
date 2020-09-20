@@ -17,6 +17,6 @@ class TestGuest(unittest.TestCase):
         self.assertEqual(100.00, self.guest_3.wallet_cash_count())
 
     def test_remove_cash_from_wallet(self):
-        self.remove_cash_from_wallet(25)
+        self.guest_4.remove_cash_from_wallet(25.00)
         self.assertEqual(11.42, self.guest_4.wallet_cash_count())
 
