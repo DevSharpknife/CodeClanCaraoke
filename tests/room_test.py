@@ -15,7 +15,7 @@ class TestRoom(unittest.TestCase):
         self.guest_1 = Guest("Mick", "Jagger", 20)
         self.guest_2 = Guest("Justin", "Bieber", 16)
         self.guest_3 = Guest("Joni", "Mitchell", 21)
-        self.guest_1 = Guest("Susan", "Boyle", 47)
+        self.guest_4 = Guest("Susan", "Boyle", 47)
 
     def test_room_has_name(self):
         self.assertEqual("Bowie", self.room_1.get_room_name())
@@ -62,3 +62,9 @@ class TestRoom(unittest.TestCase):
     def test_add_guest_to_list(self):
         self.room_1.add_guest_to_list(self.guest_1)
         self.assertEqual(1, self.room_1.guest_count())
+
+    def test_add_guest_to_list__multiple(self):
+        self.room_1.add_guest_to_list(self.guest_1)
+        self.room_1.add_guest_to_list(self.guest_3)
+        self.room_1.add_guest_to_list(self.guest_4)
+        self.assertEqual(3, self.room_1.guest_count())
