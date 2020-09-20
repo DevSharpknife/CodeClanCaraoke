@@ -16,6 +16,7 @@ class TestRoom(unittest.TestCase):
         self.guest_2 = Guest("Justin", "Bieber", 16)
         self.guest_3 = Guest("Joni", "Mitchell", 21)
         self.guest_4 = Guest("Susan", "Boyle", 47)
+        self.guest_5 = Guest("Courtney", "Love", 31)
 
     def test_room_has_name(self):
         self.assertEqual("Bowie", self.room_1.get_room_name())
@@ -72,6 +73,13 @@ class TestRoom(unittest.TestCase):
         self.room_1.check_in_guest(self.guest_3)
         self.room_1.check_in_guest(self.guest_4)
         self.assertEqual(3, self.room_1.guest_count())
+    
+    def test_check_in_room_full(self):
+        self.room_1.guest_list = [self.guest_1, self.guest_3, self.guest_2, self.guest_4]
+        self.room_1.check_in_guest(self.guest_5)
+        self.assertEqual("No room left", self.room_1.check_in_guest(self.guest_5))
+        self.assertEqual(4, self.room_1.guest_count())
+    
 
     def test_check_out_guest(self):
         self.room_1.guest_list = [self.guest_1, self.guest_3, self.guest_2, self.guest_4]
