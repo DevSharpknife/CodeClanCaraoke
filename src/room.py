@@ -23,6 +23,8 @@ class Room:
     def remove_song_from_list(self, old_song):
         self.song_list.remove(old_song)
 
+    def clear_song_list(self):
+        self.song_list = []
 
     def get_guest_list(self):
         return self.guest_list
@@ -30,12 +32,12 @@ class Room:
     def guest_count(self):
         return len(self.guest_list)
     
-    def add_guest_to_list(self, new_guest):
+    def check_in_guest(self, new_guest):
         self.guest_list.append(new_guest)
 
-    def remove_guest_from_list(self, old_guest):
+    def check_out_guest(self, old_guest):
         self.guest_list.remove(old_guest)
 
-    def remove_all_guests_from_room(self):
+    def clear_room(self):
         self.guest_list = []
 

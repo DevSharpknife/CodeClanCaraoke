@@ -63,21 +63,27 @@ class TestRoom(unittest.TestCase):
     def test_room_has_guest_list(self):
         self.assertEqual([], self.room_1.get_guest_list())
 
-    def test_add_guest_to_list(self):
-        self.room_1.add_guest_to_list(self.guest_1)
+    def test_check_in_guest(self):
+        self.room_1.check_in_guest(self.guest_1)
         self.assertEqual(1, self.room_1.guest_count())
 
-    def test_add_guest_to_list__multiple(self):
-        self.room_1.add_guest_to_list(self.guest_1)
-        self.room_1.add_guest_to_list(self.guest_3)
-        self.room_1.add_guest_to_list(self.guest_4)
+    def test_check_in_guest__multiple(self):
+        self.room_1.check_in_guest(self.guest_1)
+        self.room_1.check_in_guest(self.guest_3)
+        self.room_1.check_in_guest(self.guest_4)
         self.assertEqual(3, self.room_1.guest_count())
 
-    def test_remove_guest_from_list(self):
+    def test_check_out_guest(self):
         self.room_1.guest_list = [self.guest_1, self.guest_3, self.guest_2, self.guest_4]
-        self.room_1.remove_guest_from_list(self.guest_2)
+        self.room_1.check_out_guest(self.guest_2)
         self.assertEqual(3, self.room_1.guest_count())
 
-    def test_remove_all_guests_from_room(self):
-        self.room_1.remove_all_guests_from_room()
+    def test_check_out_guest__multiple(self):
+        self.room_1.guest_list = [self.guest_1, self.guest_3, self.guest_2, self.guest_4]
+        self.room_1.check_out_guest(self.guest_2)
+        self.room_1.check_out_guest(self.guest_4)
+        self.assertEqual(2, self.room_1.guest_count())
+
+    def test_clear_room(self):
+        self.room_1.clear_room()
         self.assertEqual(0, self.room_1.guest_count())
