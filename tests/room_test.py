@@ -16,22 +16,18 @@ class TestRoom(unittest.TestCase):
     def test_room_has_name(self):
         self.assertEqual("Bowie", self.room_1.get_room_name())
 
-    def test_room_has_song_list(self):
-        self.assertEqual([], self.room_1.get_song_list())
-
-    def test_room_has_guest_list(self):
-        self.assertEqual([], self.room_1.get_guest_list())
-    
     def test_room_name_change(self):
         self.room_1.change_room_name("Dylan")
         self.assertEqual("Dylan", self.room_1.get_room_name())
 
     
+    def test_room_has_song_list(self):
+        self.assertEqual([], self.room_1.get_song_list())
+    
     def test_empty_song_list(self):
         self.room_1.song_count()
         self.assertEqual(0, self.room_1.song_count())
         
-    
     def test_add_song_to_list(self):
         self.room_1.add_song_to_list(self.song_3)
         self.assertEqual(1, self.room_1.song_count())
@@ -41,3 +37,13 @@ class TestRoom(unittest.TestCase):
         self.room_1.add_song_to_list(self.song_2)
         self.room_1.add_song_to_list(self.song_1)
         self.assertEqual(3, self.room_1.song_count())
+
+
+    def test_remove_song_from_list(self):
+        song_list = [self.song_1, self.song_3, self.song_4]
+        self.room_1.remove_song_from_list(self.song_4)
+        self.assertEqual(2, self.room_1.song_count())
+
+
+    def test_room_has_guest_list(self):
+        self.assertEqual([], self.room_1.get_guest_list())
