@@ -13,7 +13,7 @@ class TestRoom(unittest.TestCase):
         self.song_3 = Song("David Byrne", "Finite=Alright")
         self.song_4 = Song("Portishead", "Glory Box")
         self.guest_1 = Guest("Mick", "Jagger", 20)
-        self.guest_2 = Guest("Justin", "Bieber" 16)
+        self.guest_2 = Guest("Justin", "Bieber", 16)
         self.guest_3 = Guest("Joni", "Mitchell", 21)
         self.guest_1 = Guest("Susan", "Boyle", 47)
 
@@ -58,3 +58,7 @@ class TestRoom(unittest.TestCase):
 
     def test_room_has_guest_list(self):
         self.assertEqual([], self.room_1.get_guest_list())
+
+    def test_add_guest_to_list(self):
+        self.add_guest_to_list(self.guest_1)
+        self.assertEqual(1, self.room_1.guest_count())
