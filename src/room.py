@@ -5,7 +5,7 @@ class Room:
         self.entry_fee = entry_fee
         self.song_list = []
         self.guest_list = []
-        self.room_limit = 4
+        self.room_max_guests = 4
         self.till = 100.00
 
     def get_room_name(self):
@@ -38,7 +38,7 @@ class Room:
         return len(self.guest_list)
     
     def check_in_guest(self, new_guest):
-        if self.guest_count() >= 4:
+        if self.guest_count() >= self.room_max_guests:
             return "GO AWAY COURTNEY, YOU KILLED KURT!!!"
         else:
             self.guest_list.append(new_guest)
@@ -49,6 +49,9 @@ class Room:
     def clear_room(self):
         self.guest_list = []
 
+    
+    def till_count(self):
+        return self.till
 
     def add_cash_to_till(self, transaction_amount):
         self.till += transaction_amount    

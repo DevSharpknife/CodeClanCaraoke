@@ -7,7 +7,7 @@ from src.guest import Guest
 class TestRoom(unittest.TestCase):
 
     def setUp(self):
-        self.room_1 = Room("Bowie", 25.00)
+        self.room_1 = Room("CBGB", 25.00)
         self.song_1 = Song("Juice", "Lizzo")
         self.song_2 = Song("Dr Dre", "Forgot About Dre")
         self.song_3 = Song("David Byrne", "Finite=Alright")
@@ -19,11 +19,11 @@ class TestRoom(unittest.TestCase):
         self.guest_5 = Guest("Courtney", "Love", 31, 666.66)
 
     def test_room_has_name(self):
-        self.assertEqual("Bowie", self.room_1.get_room_name())
+        self.assertEqual("CBGB", self.room_1.get_room_name())
 
     def test_room_name_change(self):
-        self.room_1.change_room_name("Dylan")
-        self.assertEqual("Dylan", self.room_1.get_room_name())
+        self.room_1.change_room_name("Bongo Club")
+        self.assertEqual("Bongo Club", self.room_1.get_room_name())
 
     
     def test_room_has_song_list(self):
