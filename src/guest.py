@@ -10,8 +10,8 @@ class Guest:
     def get_guest_first_name(self):
         return self.first_name
     
-    def get_guest_last_name(self):
-        return self.last_name
+    def get_guest_surname(self):
+        return self.surname
 
     def get_guest_age(self):
         return self.age

@@ -14,7 +14,7 @@ class TestGuest(unittest.TestCase):
 
     def test_guest_has_whole_name(self):
         self.assertEqual("Justin", self.guest_2.get_guest_first_name())
-        self.assertEqual("Bieber", self.guest_2.get_guest_last_name())
+        self.assertEqual("Bieber", self.guest_2.get_guest_surname())
 
     def test_guest_has_age(self):
         self.assertEqual(20, self.guest_1.get_guest_age())
@@ -26,6 +26,6 @@ class TestGuest(unittest.TestCase):
         self.guest_1.remove_cash_from_wallet(self.room_2.entry_fee)
         self.assertEqual(11955.00, self.guest_1.wallet_cash_count())
 
-    # def test_cheer(self):
-    #     self.cheer()
-    #     self.assertEqual("CHOON!", )
+    def test_cheer(self):
+        self.cheer()
+        self.assertEqual("CHOON!", self.guest_3.cheer())
